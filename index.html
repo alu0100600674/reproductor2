@@ -68,38 +68,5 @@
 
     </body>
 
-    <script charset="utf-8">
-                //Audio 1
-                var audioCtx = new (window.AudioContext || window.webkitAudioContext)();
-                var myAudio = document.querySelector('#audio1');
-
-                var panControl = document.querySelector('.panning-control');
-                var panValue = document.querySelector('.panning-value');
-
-                var source = audioCtx.createMediaElementSource(myAudio);
-
-                // Create a stereo panner
-                var panNode = audioCtx.createStereoPanner();
-
-                panNode.pan.value = -1;
-                source.connect(panNode);
-                panNode.connect(audioCtx.destination);
-
-                //Audio 2
-                var audioCtx2 = new (window.AudioContext || window.webkitAudioContext)();
-                var myAudio2 = document.querySelector('#audio2');
-
-                var panControl = document.querySelector('.panning-control');
-                var panValue = document.querySelector('.panning-value');
-
-                var source2 = audioCtx2.createMediaElementSource(myAudio2);
-
-                // Create a stereo panner
-                var panNode2 = audioCtx2.createStereoPanner();
-
-                panNode2.pan.value = 1;
-                source2.connect(panNode2);
-                panNode2.connect(audioCtx2.destination);
-    </script>
 
 </html>
