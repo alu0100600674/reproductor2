@@ -1,0 +1,94 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Reproductor de 2 canciones</title>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <!--<script src="script.js" charset="utf-8"></script>-->
+    </head>
+    <body>
+        <div id="header">
+  <h1>Reproductor de 2 canciones (1 en cada canal)</h1>
+</div>
+
+<div id="reproductores">
+
+  <img id="auricularL" class="auricular" src="http://i.imgur.com/1VXGufI.png" alt="Auricular izquierdo" />
+  <img id="auricularR" class="auricular" src="http://i.imgur.com/nuR4tAO.png" alt="Auricular derecho" />
+  <img id="pentagrama1" class="pentagrama" src="http://i.imgur.com/yEUXCBg.png" alt="Pentagrama" />
+  <img id="pentagrama2" class="pentagrama" src="http://i.imgur.com/yEUXCBg.png" alt="Pentagrama" />
+
+  <div class="dummy"></div>
+
+  <div id="reproductor1" class="reproductor">
+    <h2>Reproductor 1</h2>
+    <audio id="audio1" ontimeupdate="actTiempo(1)" controls>
+      <source src="https://github.com/alu0100600674/curso_html5_pruebas/blob/master/04.Todo%20Tiene%20Su%20Hora.mp3?raw=true">
+      <p>¡Su navegador no soporta HTML5!</p>
+    </audio>
+
+    <input class="panning-control" type="range" min="-1" max="1" step="0.1" value="0">
+    <span class="panning-value">0</span>
+    <pre></pre>
+
+    <input id="play1" class="boton" type="button" onclick="play(1)" value="Play"/>
+    <input id="stop1" class="boton" type="button" onclick="stop(1)" value="Stop"/>
+    <input id="tiempo1" class="tiempo" type="range" min="0" onchange="tiempo(1)" value="0"/>
+    <input id="mute1" class="boton" type="button" onclick="mute(1)" value="Mute"/>
+
+    <input id="vol1" class="vol" type="range" min="0" max="1" step="0.01" value="1" onchange="volumen(1)"/>
+    <input id="canal1" class="boton" type="button" onclick="cambiarCanal()" value="L"/>
+  </div>
+
+
+  <div id="reproductor2" class="reproductor">
+    <h2>Reproductor 2</h2>
+    <audio id="audio2" ontimeupdate="actTiempo(2)">
+      <source src="https://github.com/alu0100600674/curso_html5_pruebas/blob/master/14%20medley%20salsa%20internacional%202.mp3?raw=true">
+      <p>¡Su navegador no soporta HTML5!</p>
+    </audio>
+
+    <input id="play2" class="boton" type="button" onclick="play(2)" value="Play"/>
+    <input id="stop2" class="boton" type="button" onclick="stop(2)" value="Stop"/>
+    <input id="tiempo2" class="tiempo" type="range" min="0" onchange="tiempo(2)" value="0"/>
+    <input id="mute2" class="boton" type="button" onclick="mute(2)" value="Mute"/>
+
+    <input id="vol2" class="vol" type="range" min="0" max="1" step="0.01" value="1" onchange="volumen(2)"/>
+    <input id="canal2" class="boton" type="button" onclick="cambiarCanal()" value="R"/>
+  </div>
+
+</div>
+
+<div id="instrucciones">
+  <h2>Instrucciones de uso</h2>
+  <p>
+    Comparte tus auriculares con un amigo. Gracias a esta aplicación, cada uno podrá oir una canción diferente.
+  </p>
+  <p>
+    Con el botón "L" o "R" de los reproductores, podrás elegir en que canal reproducir cada canción.
+  </p>
+</div>
+
+    </body>
+
+    <script charset="utf-8">
+
+                var audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+                var myAudio = document.querySelector('audio');
+
+                var panControl = document.querySelector('.panning-control');
+                var panValue = document.querySelector('.panning-value');
+
+                var source = audioCtx.createMediaElementSource(myAudio);
+
+                // Create a stereo panner
+                var panNode = audioCtx.createStereoPanner();
+
+                panNode.pan.value = 1;
+                source.connect(panNode);
+                panNode.connect(audioCtx.destination);
+            
+    </script>
+
+</html>

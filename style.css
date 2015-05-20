@@ -1,0 +1,240 @@
+body{
+  background: url("http://i.imgur.com/IuCLMOX.jpg");
+}
+
+#header{
+  width: 860px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+h1{
+  font-size: 40px;
+}
+
+h1, h2{
+  font-family: Lobster;
+  text-align: center;
+}
+
+#reproductores{
+  background: url("http://i.imgur.com/Oke75VP.jpg");
+  width: 860px;
+  height: 400px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 30px;
+  border: solid 3px;
+  border-radius: 10px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#instrucciones{
+  width: 860px;
+  height: 160px;
+  padding-left: 10px;
+  padding-right: 10px;
+  border: solid 3px;
+  border-radius: 10px;
+  margin-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#instrucciones p{
+  font-family: audiowide;
+}
+
+.pentagrama{
+  width: 200px;
+  position:relative;
+  top: -95px;
+  /*background: black;*/
+}
+
+#pentagrama1{
+  -webkit-transform-origin: 0;
+      -ms-transform-origin: 0;
+          transform-origin: 0;
+  /*animation: mover-pentagrama 4s linear infinite;*/
+}
+
+#pentagrama2{
+  left: 235px;
+  -webkit-transform-origin: 100%;
+      -ms-transform-origin: 100%;
+          transform-origin: 100%;
+  /*animation: mover-pentagrama 4s linear infinite;*/
+}
+
+.auricular{
+  height: 150px;
+}
+
+#auricularL{
+  position: relative;
+  top: 4px;
+  left: 50px;
+}
+
+#auricularR{
+  position: relative;
+  top: 4px;
+  left: 700px;
+}
+
+.reproductor{
+  width: 400px;
+  height: 200px;
+  padding: 10px;
+  /*border: solid 2px;*/
+  border-radius: 10px;
+  /*background: #ccc;*/
+  background: rgba(204, 204, 204, 0.85);
+}
+
+/*.reproductor h2{
+  text-align: center;
+}*/
+
+#reproductor1{
+  float: left;
+}
+
+#reproductor2{
+  float: right;
+}
+
+#canal1, #canal2{
+  position: relative;
+  top: 20px;
+  left: 120px;
+}
+
+.boton{
+  width: 60px;
+  height: 40px;
+  border-radius: 5px;
+}
+
+#play1, #play2{
+  background: red;
+}
+
+#mute1, #mute2{
+  background: green;
+}
+
+#stop1, #stop2{
+  background: blue;
+}
+
+#canal1, #canal2{
+  background: yellow;
+}
+
+.tiempo{
+  width: 200px;
+  position: relative;
+  top: 6px;
+}
+
+.vol{
+  width: 120px;
+  position: relative;
+  top: 27px;
+  left: 90px;
+}
+
+@-webkit-keyframes mover-pentagramaL{
+  0%{
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  25%{
+    -webkit-transform: rotate(-7deg);
+            transform: rotate(-7deg);
+  }
+  50%{
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  75%{
+    -webkit-transform: rotate(7deg);
+            transform: rotate(7deg);
+  }
+  100%{
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+}
+
+@keyframes mover-pentagramaL{
+  0%{
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  25%{
+    -webkit-transform: rotate(-7deg);
+            transform: rotate(-7deg);
+  }
+  50%{
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  75%{
+    -webkit-transform: rotate(7deg);
+            transform: rotate(7deg);
+  }
+  100%{
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+}
+
+@-webkit-keyframes mover-pentagramaR{
+  0%{
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  25%{
+    -webkit-transform: rotate(7deg);
+            transform: rotate(7deg);
+  }
+  50%{
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  75%{
+    -webkit-transform: rotate(-7deg);
+            transform: rotate(-7deg);
+  }
+  100%{
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+}
+
+@keyframes mover-pentagramaR{
+  0%{
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  25%{
+    -webkit-transform: rotate(7deg);
+            transform: rotate(7deg);
+  }
+  50%{
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  75%{
+    -webkit-transform: rotate(-7deg);
+            transform: rotate(-7deg);
+  }
+  100%{
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+}
