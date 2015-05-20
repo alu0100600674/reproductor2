@@ -139,6 +139,10 @@ function cambiarCanal(){
   var aux = canal1.getAttribute("value");
   canal1.setAttribute("value", canal2.getAttribute("value"));
   canal2.setAttribute("value", aux);
+
+  var aux2 = panNode.pan.value;
+  panNode.pan.value = panNode2.pan.value
+  panNode2.pan.value = aux2;
 }
 
 function notificarFin(num){
