@@ -31,7 +31,7 @@ panNode.connect(audioCtx.destination);
 */
 
 
-/*function play(num){
+function play(num){
   var audio = document.getElementById("audio" + num);
   var play = document.getElementById("play" + num);
   var tiempo = document.getElementById("tiempo" + num);
@@ -150,4 +150,4 @@ function notificarFin(num){
   Notification.requestPermission(function(){
     new Notification(title, options);
   });
-}*/
+}
