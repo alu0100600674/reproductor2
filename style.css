@@ -1,5 +1,5 @@
 body{
-    background: url("http://i.imgur.com/IuCLMOX.jpg");
+    background: url("images/fondo1.jpg");
 }
 
 #header{
@@ -18,7 +18,7 @@ h1, h2{
 }
 
 #reproductores{
-    background: url("http://i.imgur.com/Oke75VP.jpg");
+    background: url("images/fondo2.jpg");
     width: 860px;
     height: 400px;
     padding-left: 10px;
