@@ -1,6 +1,5 @@
 body{
     background: url("images/fondo1.jpg");
-    font-family: fontawesome;
 }
 
 #header{
@@ -108,7 +107,7 @@ left: 235px;
     width: 60px;
     height: 40px;
     border-radius: 5px;
-    font-family: fontawesome;
+    font-family: audiowide;
 }
 
 #play1, #play2{
@@ -144,6 +143,7 @@ label{
     position: relative;
     top: 20px;
     left: 75px;
+    font-family: audiowide;
 }
 
 .piloto{
