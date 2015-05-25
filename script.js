@@ -6,7 +6,7 @@ function play(num){
     var pent = document.getElementById("pentagrama" + num);
 
     audio.addEventListener("ended", function(){
-        play.setAttribute("value", "Play");
+        play.setAttribute("value", "PLAY");
         if(audio.currentTime == audio.duration){
             notificarFin(num);
         }
@@ -17,7 +17,7 @@ function play(num){
 
     if(audio.paused){
         audio.play();
-        play.setAttribute("value", "Pause");
+        play.setAttribute("value", "PAUSE");
         play.setAttribute("style", "background:green;")
         if(num == 1){
             pent.setAttribute("style", "animation: mover-pentagramaL 4s linear infinite;")
@@ -28,7 +28,7 @@ function play(num){
     }
     else{
         audio.pause();
-        play.setAttribute("value", "Play");
+        play.setAttribute("value", "PLAY");
         play.setAttribute("style", "background:orange;")
         pent.removeAttribute("style");
     }
@@ -43,7 +43,7 @@ function stop(num){
     audio.pause();
     audio.currentTime = 0;
     tiempo.value = 0;
-    play.setAttribute("value", "Play");
+    play.setAttribute("value", "PLAY");
     play.setAttribute("style", "background:red;")
     pent.removeAttribute("style");
 }
