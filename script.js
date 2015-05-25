@@ -116,7 +116,7 @@ function notificarFin(num){
     title = "¡Reproductor " + num + ": Stop!";
     options = {
         body: "El reproductor " + num + " ha terminado de reproducir.",
-        icon: "http://i.imgur.com/As6ImqG.png"
+        icon: "images/stop.png"
     };
     Notification.requestPermission(function(){
         new Notification(title, options);
