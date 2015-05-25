@@ -117,13 +117,13 @@ left: 235px;
     background: green;
 }
 
-#stop1, #stop2{
+/*#stop1, #stop2{
     background: blue;
-}
+}*/
 
-#canal1, #canal2{
+/*#canal1, #canal2{
     background: yellow;
-}
+}*/
 
 .tiempo{
     width: 200px;
@@ -134,8 +134,25 @@ left: 235px;
 .vol{
     width: 120px;
     position: relative;
-    top: 27px;
-    left: 90px;
+    top: 4px;
+    left: 5px;
+}
+
+label{
+    position: relative;
+    top: 20px;
+    left: 75px;
+}
+
+.piloto{
+    position: relative;
+    top: -7.5px;
+    left: 65px;
+    width: 10px;
+    height: 10px;
+    /*background: red;*/
+    border: solid 1px #C0C0C0;
+    border-radius: 10px;
 }
 
 @-webkit-keyframes mover-pentagramaL{
