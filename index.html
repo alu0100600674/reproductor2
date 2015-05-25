@@ -5,6 +5,7 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
         <link href='http://fonts.googleapis.com/css?family=Lobster|Audiowide' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 
         <link rel="apple-touch-icon" sizes="57x57" href="images/favicon/apple-touch-icon-57x57.png">
         <link rel="apple-touch-icon" sizes="60x60" href="images/favicon/apple-touch-icon-60x60.png">
@@ -49,6 +50,7 @@
                 </audio>
 
                 <input id="play1" class="boton" type="button" onclick="play(1)" value="Play"/>
+                <!-- <input id="play1" class="boton" type="button" onclick="play(1)" value="\f04b"/> -->
                 <input id="stop1" class="boton" type="button" onclick="stop(1)" value="Stop"/>
                 <input id="tiempo1" class="tiempo" type="range" min="0" onchange="tiempo(1)" value="0"/>
                 <input id="mute1" class="boton" type="button" onclick="mute(1)" value="Mute"/>
@@ -94,7 +96,7 @@
 
     </body>
 
-    <script charset="utf-8">
+    <!-- <script charset="utf-8">
         //Audio 1
         var audioCtx = new (window.AudioContext || window.webkitAudioContext)();
         var myAudio = document.querySelector('#audio1');
@@ -112,5 +114,5 @@
         panNode2.pan.value = 1;
         source2.connect(panNode2);
         panNode2.connect(audioCtx2.destination);
-    </script>
+    </script> -->
 </html>

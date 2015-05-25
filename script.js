@@ -1,3 +1,23 @@
+document.addEventListener("DOMContentLoaded", function(event) {
+    //Audio 1
+    var audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+    var myAudio = document.querySelector('#audio1');
+    var source = audioCtx.createMediaElementSource(myAudio);
+    var panNode = audioCtx.createStereoPanner();
+    panNode.pan.value = -1;
+    source.connect(panNode);
+    panNode.connect(audioCtx.destination);
+
+    //Audio 2
+    var audioCtx2 = new (window.AudioContext || window.webkitAudioContext)();
+    var myAudio2 = document.querySelector('#audio2');
+    var source2 = audioCtx2.createMediaElementSource(myAudio2);
+    var panNode2 = audioCtx2.createStereoPanner();
+    panNode2.pan.value = 1;
+    source2.connect(panNode2);
+    panNode2.connect(audioCtx2.destination);
+});
+
 function play(num){
     var audio = document.getElementById("audio" + num);
     var play = document.getElementById("play" + num);

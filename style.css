@@ -1,5 +1,6 @@
 body{
     background: url("images/fondo1.jpg");
+    font-family: fontawesome;
 }
 
 #header{
@@ -107,6 +108,7 @@ left: 235px;
     width: 60px;
     height: 40px;
     border-radius: 5px;
+    font-family: fontawesome;
 }
 
 #play1, #play2{
