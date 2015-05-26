@@ -1,12 +1,14 @@
 function play(num){
     var audio = document.getElementById("audio" + num);
     var play = document.getElementById("play" + num);
+    var iplay = document.getElementById("iplay" + num);
     var tiempo = document.getElementById("tiempo" + num);
     tiempo.setAttribute("max", audio.duration);
     var pent = document.getElementById("pentagrama" + num);
 
     audio.addEventListener("ended", function(){
-        play.setAttribute("value", "PLAY");
+        // play.setAttribute("value", "PLAY");
+        iplay.setAttribute("class", "fa fa-play");
         if(audio.currentTime == audio.duration){
             notificarFin(num);
         }
@@ -17,7 +19,8 @@ function play(num){
 
     if(audio.paused){
         audio.play();
-        play.setAttribute("value", "PAUSE");
+        // play.setAttribute("value", "PAUSE");
+        iplay.setAttribute("class", "fa fa-pause");
         play.setAttribute("style", "background:green;")
         if(num == 1){
             pent.setAttribute("style", "animation: mover-pentagramaL 4s linear infinite;")
@@ -28,7 +31,8 @@ function play(num){
     }
     else{
         audio.pause();
-        play.setAttribute("value", "PLAY");
+        // play.setAttribute("value", "PLAY");
+        iplay.setAttribute("class", "fa fa-play");
         play.setAttribute("style", "background:orange;")
         pent.removeAttribute("style");
     }
@@ -37,13 +41,15 @@ function play(num){
 function stop(num){
     var audio = document.getElementById("audio" + num);
     var play = document.getElementById("play" + num);
+    var iplay = document.getElementById("iplay" + num);
     var stop = document.getElementById("stop" + num);
     var tiempo = document.getElementById("tiempo" + num);
     var pent = document.getElementById("pentagrama" + num)
     audio.pause();
     audio.currentTime = 0;
     tiempo.value = 0;
-    play.setAttribute("value", "PLAY");
+    // play.setAttribute("value", "PLAY");
+    iplay.setAttribute("class", "fa fa-play");
     play.setAttribute("style", "background:red;")
     pent.removeAttribute("style");
 }
@@ -54,6 +60,7 @@ function mute(num){
     var audio = document.getElementById("audio" + num);
     var vol = document.getElementById("vol" + num);
     var mute = document.getElementById("mute" + num);
+    var imute = document.getElementById("imute" + num);
 
     if(audio.volume > 0){
         if(num == 1){
@@ -65,6 +72,7 @@ function mute(num){
         audio.volume = 0;
         vol.value = 0;
         mute.setAttribute("style", "background:red;")
+        imute.setAttribute("class", "fa fa-volume-off");
     }
     else{
         if(num == 1){
@@ -76,6 +84,7 @@ function mute(num){
             vol.value = ant2;
         }
         mute.setAttribute("style", "background:green;")
+        imute.setAttribute("class", "fa fa-volume-up");
     }
 }
 
