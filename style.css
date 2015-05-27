@@ -59,7 +59,7 @@ h1, h2{
 }
 
 #pentagrama2{
-left: 235px;
+    left: 235px;
     -webkit-transform-origin: 100%;
         -ms-transform-origin: 100%;
             transform-origin: 100%;
@@ -144,17 +144,6 @@ label{
     top: 20px;
     left: 75px;
     font-family: audiowide;
-}
-
-.piloto{
-    position: relative;
-    top: -7.5px;
-    left: 65px;
-    width: 10px;
-    height: 10px;
-    /*background: red;*/
-    border: solid 1px #C0C0C0;
-    border-radius: 10px;
 }
 
 @-webkit-keyframes mover-pentagramaL{
