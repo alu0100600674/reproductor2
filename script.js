@@ -54,8 +54,8 @@ function stop(num){
     pent.removeAttribute("style");
 }
 
-var ant1 = 0;
-var ant2 = 0;
+var ant1 = 1;
+var ant2 = 1;
 function mute(num){
     var audio = document.getElementById("audio" + num);
     var vol = document.getElementById("vol" + num);
@@ -90,8 +90,15 @@ function mute(num){
 
 function volumen(num){
     var vol = document.getElementById("vol" + num).value;
+    var imute = document.getElementById("imute" + num);
     var audio = document.getElementById("audio" + num);
     audio.volume = vol;
+    if(audio.volume > 0){
+        imute.setAttribute("class", "fa fa-volume-up");
+    }
+    else{
+        imute.setAttribute("class", "fa fa-volume-off");
+    }
 }
 
 function tiempo(num){
