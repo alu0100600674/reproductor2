@@ -71,7 +71,7 @@ function mute(num){
         }
         audio.volume = 0;
         vol.value = 0;
-        mute.setAttribute("style", "background:red;")
+        //mute.setAttribute("style", "background:red;")
         imute.setAttribute("class", "fa fa-volume-off");
     }
     else{
@@ -83,7 +83,7 @@ function mute(num){
             audio.volume = ant2;
             vol.value = ant2;
         }
-        mute.setAttribute("style", "background:green;")
+        //mute.setAttribute("style", "background:green;")
         imute.setAttribute("class", "fa fa-volume-up");
     }
 }
