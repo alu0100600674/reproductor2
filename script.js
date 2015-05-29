@@ -71,7 +71,7 @@ function mute(num){
         }
         audio.volume = 0;
         vol.value = 0;
-        //mute.setAttribute("style", "background:red;")
+        // mute.setAttribute("style", "background:red;")
         imute.setAttribute("class", "fa fa-volume-off");
     }
     else{
@@ -83,8 +83,14 @@ function mute(num){
             audio.volume = ant2;
             vol.value = ant2;
         }
-        //mute.setAttribute("style", "background:green;")
-        imute.setAttribute("class", "fa fa-volume-up");
+        // mute.setAttribute("style", "background:green;")
+        // imute.setAttribute("class", "fa fa-volume-up");
+        if(audio.volume > 0 && audio.volume < 0.7){
+            imute.setAttribute("class", "fa fa-volume-down");
+        }
+        else if(audio.volume >= 0.7 && audio.volume <= 1){
+            imute.setAttribute("class", "fa fa-volume-up");
+        }
     }
 }
 
@@ -93,7 +99,10 @@ function volumen(num){
     var imute = document.getElementById("imute" + num);
     var audio = document.getElementById("audio" + num);
     audio.volume = vol;
-    if(audio.volume > 0){
+    if(audio.volume > 0 && audio.volume < 0.7){
+        imute.setAttribute("class", "fa fa-volume-down");
+    }
+    else if(audio.volume >= 0.7 && audio.volume <= 1){
         imute.setAttribute("class", "fa fa-volume-up");
     }
     else{
